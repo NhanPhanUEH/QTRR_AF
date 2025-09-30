@@ -3,7 +3,7 @@
     name: qtrr-af
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "streamlit run appQTRR.py --server.port \ --server.address 0.0.0.0"
+    startCommand: "streamlit run appQTRR.py --server.port $PORT --server.address 0.0.0.0"
     plan: free
     autoDeploy: true
     envVars:
