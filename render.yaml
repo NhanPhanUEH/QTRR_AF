@@ -1,0 +1,13 @@
+﻿services:
+  - type: web
+    name: qtrr-af
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run appQTRR.py --server.port \ --server.address 0.0.0.0"
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+      - key: STREAMLIT_BROWSER_GATHERUSAGESTATS
+        value: "false"
